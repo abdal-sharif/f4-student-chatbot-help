@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simad AI</title>
+    <style>
+        body {
+            background-color: #0f341f;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .chatbox {
+            width: 85vw;  /* Dynamic width for responsiveness */
+            max-width: 900px;  /* Cap maximum width on larger screens */
+            height: 85vh;  /* Increased the height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: black;
+            padding: 20px;
+        }
+
+        .chat-log {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: scroll;
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+        }
+
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        .chat-log::-webkit-scrollbar {
+            display: none;
+        }
+
+        .chat-message {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .chat-message.user {
+            justify-content: flex-end;
+        }
+
+        .chat-message.bot {
+            justify-content: flex-start;
+        }
+
+        .chat-bubble {
+            max-width: 70%;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 5px 0;
+        }
+
+        .chat-bubble.user {
+            background-color: rgba(0, 128, 0, 0.2);  /* Low opacity green */
+            color: black;
+            text-align: right;
+        }
+
+        .chat-bubble.bot {
+            background-color: transparent;
+            color: black;
+            text-align: left;
+        }
+
+        #chat-form {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        #query {
+            width: 75%;
+            padding: 10px;
+            border: 2px solid #0f341f;
+            border-radius: 20px;
+            outline: none;
+        }
+        .chat-log {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    overflow-y: scroll;
+}
+
+.chat-log::-webkit-scrollbar {
+    display: none;
+}
+
+        .chat-log {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: scroll;
+    scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: #0f341f #ffffff;  /* Firefox - green scrollbar on white track */
+}
+
+.chat-log::-webkit-scrollbar {
+    width: 8px;  /* Width of the scrollbar */
+}
+
+.chat-log::-webkit-scrollbar-track {
+    background: #ffffff;  /* Background color of the scrollbar track */
+    border-radius: 10px;
+}
+
+.chat-log::-webkit-scrollbar-thumb {
+    background-color: #0f341f; /* Scrollbar color */
+    border-radius: 10px;
+    border: 2px solid #ffffff; /* Adds a border around the scrollbar for better contrast */
+}
+
+.chat-log::-webkit-scrollbar-thumb:hover {
+    background-color: #095d38; /* Darker color on hover for the scrollbar */
+}
+    
+
+        #submit-button {
+            padding: 10px 20px;
+            background-color: #0f341f;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        #submit-button:hover {
+            background-color: #095d38;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+
+        .simad-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .typing-indicator {
+            font-size: 24px;
+            letter-spacing: 4px;
+            color: black;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .chatbox {
+                width: 90vw;
+                height: 80vh;
+                padding: 15px;
+            }
+
+            #query {
+                width: 70%;  /* Adjust input field size for smaller screens */
+            }
+
+            #submit-button {
+                padding: 8px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chatbox {
+                width: 95vw;
+                height: 75vh;
+                padding: 10px;
+            }
+
+            #query {
+                width: 65%;  /* Further adjust input field size for smaller screens */
+            }
+
+            #submit-button {
+                padding: 6px 12px;
+            }
+
+            .chat-bubble {
+                max-width: 90%;  /* Make bubbles wider for better readability on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo at the top-left corner -->
+    <img src="static/images/logo.jpg" alt="Logo" class="logo">
+
+    <div class="chatbox">
+        <div class="chat-log" id="chat-log"></div>
+        <form id="chat-form">
+            <input type="text" id="query" placeholder="Ask me about Simad University...">
+            <button type="submit" id="submit-button">Send</button>
+        </form>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "faculties": [
+    {
+      "name": "Engineering",
+      "related_subjects": ["Mathematics", "Physics", "Chemistry"],
+      "description": "Fakultiyadda Injineerinka waxay diiradda saareysaa naqshadaynta, horumarinta, iyo dayactirka kaabayaasha, mashiinada, iyo teknoolojiyadda."
+    },
+    {
+      "name": "Medicine",
+      "related_subjects": ["Biology", "Chemistry"],
+      "description": "Fakultiyadda Caafimaadka waxay ardayda u diyaarinaysaa xirfadaha daryeelka caafimaadka, sida in ay noqdaan dhakhaatiir, kalkaaliyeyaal, iyo xirfadlayaal kale oo caafimaad."
+    },
+    {
+      "name": "Business Administration",
+      "related_subjects": ["Mathematics", "Economics"],
+      "description": "Fakultiyadda Maamulka Ganacsiga waxay ka kooban tahay maaraynta, maaliyadda, suuqgeynta, iyo xisaabinta."
+    },
+    {
+      "name": "Computer Science",
+      "related_subjects": ["Mathematics", "Computer Science", "Physics"],
+      "description": "Fakultiyadda Sayniska Kombuyuutarka waxay diiradda saareysaa horumarinta software-ka, falanqaynta xogta, iyo sirdoonka macmalka."
+    },
+    {
+      "name": "Arts",
+      "related_subjects": ["History", "Literature", "Art"],
+      "description": "Fakultiyadda Fanka waxay ka kooban tahay daraasadaha bini'aadantinimada, luqadaha, taariikhda, iyo fanka hal-abuurka."
+    }
+  ]
+}
