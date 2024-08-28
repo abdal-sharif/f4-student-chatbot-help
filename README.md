@@ -1,0 +1,1 @@
+kani waa web app loogu tala galay in lagu caawiyo ardayda fresh ka ah ee kaso qalinjabisay school ka si looga caawiyo kulliyada ku haboon ee ka baran karaan jamacada ayago u sheegaya chatbot ka madada school ka ay ku fiican yhin
